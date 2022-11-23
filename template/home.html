@@ -11,9 +11,9 @@
   </head>
   <body>
     <h1>Search your fauvorite products!!</h1>
-    <form class="d-flex justify-content-center align-items-center mb-2">
-        <input type="text" placeholder="product" class="form-control me-2">
-        <button class="btn btn-primary">Search</button>
+    <form class="d-flex justify-content-center align-items-center mb-2" action="" method="post">{% csrf_token %}
+        <input type="text" placeholder="Insert a product to search..." class="form-control me-2" name="input-product">
+        <button class="btn btn-primary" type="submit">Search</button>
     </form>
     <section class="cards-container">
       {% for elem in product %}

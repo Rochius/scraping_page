@@ -14,5 +14,8 @@ class Product(models.Model):
         return f'{self.sku} - {self.name}'
 
 class Search(models.Model):
-    search_input: models.CharField(max_length=40)
-    search_date: models.TimeField(datetime.datetime.now())
+    search= models.CharField(max_length=30)
+    dateInput=models.DateTimeField(default= datetime.datetime.now())
+
+    def __str__(self) -> str:
+        return f'{self.search}'
